@@ -202,7 +202,7 @@ nav ul li a{
  
 
 
-@media (max-width: 1090px) {
+@media (max-width: 700px) {
    
     header nav{
         display: flex;
