@@ -33,7 +33,6 @@ body, *{
     box-sizing: border-box;
 }
 
-
 html{
     font-size: 62.5%;  
 }
@@ -46,9 +45,10 @@ html{
 
 @media only screen and (max-width: 634px) {
     html{
-        font-size: 35%;
+        font-size: 50%;
     }
 }
+
 
 header{
     background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../img/code.jpg);
@@ -203,7 +203,8 @@ nav ul li a{
 
 
 @media (max-width: 700px) {
-   
+    h1{ line-height: normal;}
+    
     header nav{
         display: flex;
     line-height: normal;
