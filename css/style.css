@@ -47,11 +47,6 @@ html{
     }
 }
 
-@media only screen and (max-width: 634px) {
-    html{
-        font-size: 30%;
-    }
-}
 @media only screen and (max-width: 427px) {
     h1{font-size: 4rem; font-family:harmony;}
 }
