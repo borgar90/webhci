@@ -1,0 +1,487 @@
+/**************/
+/* TYPOGRAPHY */
+/**************/
+
+@font-face {
+    font-family:harmony;
+    src: url(../font/harmony.otf);
+}
+@font-face {
+    font-family: abayah;
+    src: url(../font/abayha.ttf);
+}
+ 
+h1{font-size: 6rem !important; font-family:harmony;}
+h2{font-size: 5rem !important; font-family:harmony;}
+h3{font-size: 4rem !important; font-family:harmony;}
+h4{font-size: 3rem !important; font-family:harmony;}
+h5{font-size: 2.5rem !important; margin-top: 20px; margin-bottom: 20px; font-family:harmony;}
+
+p, li, a{font-family: abayah; font-size: 2rem;}
+
+.menu li a {
+    font-size: 4rem;
+}
+
+/*******************/
+/* TYPOGRAPHY END */
+/*****************/
+
+body, *{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+
+html{
+    font-size: 62.5%;  
+}
+
+@media only screen and (max-width: 800px) {
+    html{
+        font-size: 50%;
+    }
+}
+
+@media only screen and (max-width: 634px) {
+    html{
+        font-size: 35%;
+    }
+}
+
+header{
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../img/code.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left top;
+}
+header section{
+    background:#634A90;
+    color: white;
+    width: 100%;
+    padding: 40px;
+    
+}
+
+header nav{
+    padding: 40px;
+    margin: 0px;
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+    line-height: 100px;
+}
+header nav img{
+    width: 100px;
+    height: 100px;
+}
+.logoAndNavWrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    line-height: 100px;
+}
+.logoAndNavWrapper a{
+    text-decoration: none;
+}
+.logoAndNavWrapper h1{
+    font-family: harmony;
+    margin-left: 20px;
+    color:white;
+}
+
+nav ul{
+    padding: 0px;
+    margin:0px;
+    list-style: none;
+    padding-left: 40px;
+    margin: 0px;
+    display: flex;
+    justify-content: space-between;
+}
+nav ul li{
+    padding: 0px;
+    margin: 0px;
+    margin-right: 1rem;
+    cursor:pointer;
+}
+
+nav ul li:hover{
+    text-decoration: underline;
+}
+
+nav ul li:last-child { 
+    margin-right: 0px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+
+ /* HAMBURGER MENU, borrowed from https://codepen.io/alvarotrigo/pen/MWEJEWG Customized with color by Borgar Flaen Stensrud*/
+ /* COMMENT::::: There are better ways to create a hamburger menu, but we where not allowed to use javascript, so I used this hack. */
+ .menu {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu > li {
+    margin: 0 1rem;
+    overflow: hidden;
+  }
+  .menu:last-child{
+      margin-right: 40px;
+  }
+  .menu-button-container {
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  
+ #menu-toggle {
+    display: none;
+  }
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: white;
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+
+.menu-button::before {
+    content: "";
+    margin-top: -8px;
+  }
+  
+  .menu-button::after {
+    content: "";
+    margin-top: 8px;
+  }
+  
+  #menu-toggle:checked + .menu-button-container .menu-button::before {
+    margin-top: 0px;
+    transform: rotate(405deg);
+  }
+  
+  #menu-toggle:checked + .menu-button-container .menu-button {
+    background: rgba(255, 255, 255, 0);
+  }
+  
+  #menu-toggle:checked + .menu-button-container .menu-button::after {
+    margin-top: 0px;
+    transform: rotate(-405deg);
+  }
+
+@media (max-width:904px) {
+    .logoAndNavWrapper{
+        align-items: center;
+        flex-direction: column;
+    }
+}  
+ 
+
+
+@media (max-width: 800px) {
+   
+    header nav{
+        display: flex;
+    line-height: normal;
+    flex-direction: column;
+    align-items: center;
+    }
+  .menu-button-container {
+    display: flex;
+    margin-top: 20px;
+  }
+  .menu {
+    position: absolute;
+    top: 195px;
+    margin-top: 50px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  #menu-toggle ~ .menu li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  #menu-toggle:checked ~ .menu li {
+    border: 1px solid #333;
+    height: 3.5em;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .menu > li {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+    color: white;
+    background-color: #334E7B;
+  }
+  .menu > li:not(:last-child) {
+    border-bottom: 1px solid #444;
+  }
+  nav ul li a{
+    color: white;
+}
+}
+
+@media (max-width:460px) {
+    h1{
+        font-size: 1.5rem;
+    }
+    .menu{top: 175px;}
+} 
+/*Hamburger menu end  */ 
+
+
+
+.headerContent{
+    padding:40px;
+}
+
+header section h1 {
+    font-size: 4rem;
+    margin-top: 0px;
+    font-family: harmony;
+}
+
+.mainContent{
+    padding: 40px;
+    /*background-image: url("../img/bg.jpg");*/
+    background-color: white;
+    background-size: auto;
+    background-repeat: no-repeat;
+}
+
+.mainContent h2{
+    margin-bottom: 80px;
+    color: black;
+    font-size: 4rem;
+    font-family:harmony;
+}
+
+/* about us */
+
+.aboutUs ul{ 
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.aboutUs ul li{
+    list-style:none;
+    min-width: 400px;
+    max-width: 400px;
+    padding: 20px;
+    margin-right:20px;
+    background-color: #2F4858;
+    filter:drop-shadow(.5rem .5rem 1rem #000);
+    color:white;
+}
+
+.aboutUs ul li:last-child{
+    margin-right: 0px;
+}
+
+.analysis{
+    background-image: url("../img/data-analysis.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center, 0px;
+    min-width: 100%;
+    min-height: 50px;
+    text-align: center;
+   
+}
+
+.design{
+    background-image: url("../img/sketch.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center, 0px;
+    min-width: 100%;
+    min-height: 50px;
+    text-align: center;
+}
+
+.development{
+    background-image: url("../img/web-programming.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center, 0px;
+    min-width: 100%;
+    min-height: 50px;
+    text-align: center;
+}
+
+
+.aboutUs ul li h3{
+    margin-bottom: 20px;
+    font-family:harmony;
+    font-size: 2rem;
+}
+
+.newsletter{
+    background:#D40063;
+    color: white;
+    font-family: harmony;
+    background-position:-300px, 0px;
+    background-repeat: no-repeat;
+    height:auto;
+    width: 100%;
+    background-size: 100%;
+    padding: 40px;
+    font-size: 2rem;
+}
+
+.newsletter h2{
+    margin-bottom: 40px;
+}
+.input{
+    margin-bottom: 40px;
+}
+.btn{
+    color: white;
+    background: rgb(233,6,36);
+    padding: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 1336px) {
+    .aboutUs ul li{
+        margin-bottom: 40px;
+    }
+    .aboutUs ul li:last-child{
+        margin-bottom: 0px;
+    }
+    .aboutUs ul{
+        justify-content: start;
+    }
+}
+
+@media only screen and (max-width: 936px) {
+
+    .aboutUs ul {
+        flex-direction: column;
+    }
+    .aboutUs ul li, .aboutUs ul {
+        min-width: 100%;
+    }
+    
+}
+
+@media only screen and (max-width: 916px) {
+
+    
+    
+}
+
+
+
+@media only screen and (max-width: 516px) {
+    
+     
+    .btn{
+        margin: 0px;
+    }
+}
+  
+.newsletter div input{
+    padding: 20px;
+    width: 300px;
+}
+footer{
+    background-color: #634A90;
+    color: white;
+    position: static;
+    bottom: 0px;
+    width: 100%;
+    padding: 40px;
+    font-family: harmony;
+}
+.footerHeader{
+    margin-bottom: 20px;
+}
+.footerWrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background-color: #2F4858;
+}
+.footerWrapper div{
+    padding: 20px;
+    background-color: #2F4858;
+}
+
+.footerWrapper ul {
+    list-style-type: none;
+}
+
+.footerWrapper ul li{
+    text-align: start;
+}
+.footerWrapper ul li a{
+    text-decoration: underline;
+    color:white;
+}
+.copyright{
+    margin-top:40px;
+    font-family: harmony;
+    text-align: center;
+}
+.footerLink{
+    margin-bottom: 20px;
+}
+
+.footerLink img{
+    max-width: 100px;
+}
+.linkedin{
+    width:50px;
+}
+.github{
+    margin-left: -5px;
+}
+@media only screen and (max-width: 723px) {
+    .footerWrapper{
+        flex-direction: column;
+        padding-left: 40px;
+    }
+    .footerWrapper div{
+        padding-left:0px;
+    }
+ }
