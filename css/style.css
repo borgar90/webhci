@@ -27,13 +27,17 @@ p, li, a{font-family: abayah; font-size: 2rem;}
 /* TYPOGRAPHY END */
 /*****************/
 
-body, *{
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
+*{
+    margin: 0;
+    padding: 0;
+}
+
+*,*::before, *::after{
+    box-sizing: inherit;
 }
 
 html{
+    box-sizing: border-box;
     font-size: 62.5%;  
 }
 
