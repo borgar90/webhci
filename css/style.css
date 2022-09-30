@@ -11,11 +11,11 @@
     src: url(../font/abayha.ttf);
 }
  
-h1{font-size: 6rem !important; font-family:harmony;}
-h2{font-size: 5rem !important; font-family:harmony;}
-h3{font-size: 4rem !important; font-family:harmony;}
-h4{font-size: 3rem !important; font-family:harmony;}
-h5{font-size: 2.5rem !important; margin-top: 20px; margin-bottom: 20px; font-family:harmony;}
+h1{font-size: 6rem; font-family:harmony;}
+h2{font-size: 5rem; font-family:harmony;}
+h3{font-size: 4rem; font-family:harmony;}
+h4{font-size: 3rem; font-family:harmony;}
+h5{font-size: 2.5rem; margin-top: 20px; margin-bottom: 20px; font-family:harmony;}
 
 p, li, a{font-family: abayah; font-size: 2rem;}
 
@@ -256,12 +256,7 @@ nav ul li a{
 }
 }
 
-@media (max-width:460px) {
-    h1{
-        font-size: 1.5rem;
-    }
-    .menu{top: 175px;}
-} 
+
 /*Hamburger menu end  */ 
 
 
