@@ -3,6 +3,7 @@
     <head>
         <title>Under construction web</title>
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/home.css">
        <meta charset="UTF-8">
        <meta name="description" content="">
        <meta name="keywords" content="">
@@ -15,7 +16,7 @@
             <nav>
                 <div class="logoAndNavWrapper">
                     <a href="index.html">
-                        <img src="img/swirl.png" alt="">
+                        <img src="img/swirl.png" title="Under construction web" alt="Under construction web logo">
                     </a>
                     <a href="index.html">
                         <h1>Under construction web</h1>
@@ -33,33 +34,55 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
-            <section>
-                <h1>This is our home page</h1>
-                <p>This page wishes you welcome to Under Construction Web</p>
+            <section id="indexBanner">
+                <div>
+                    <h1>Designer</h1>
+                    <p>Designer specialising in web design and UI design. </p>
+                </div>
+                <img src="img/front/bockuplaptop.png" title="Designer and coder" alt="Mockup of our website" >
+                <div>
+                    <h1>&#60; Coder &#62;</h1>
+                    <p>Full stack developer who writes clean, elegant and efficient code.</p>
+                </div>
+                
             </section>
+            
 
         </header>
-
+        <section id="headerLineIndex">
+            <h1>This is our product page</h1>
+            <p>This page consists of a list of our products</p>
+        </section>
         <section class="mainContent">
             <h2>We're wizzards that conjoure websites</h2>
             <div class="aboutUs">
                 <ul>
                     <li>
+                        <img src="img/front/analysis.jpg" title="Analysis" alt="Image of analysis">
                         <!--<div class="analysis"></div>-->
-                        <h3>Analysis</h3>
-                        <p>We begin our conjourations by doing a set of analysis. We use data sience to figure out exactly what we're going to conjoure. We use both statistics and color theory to apply the best design. We then research what data we're going to need to optimize the site.</p>
+                        <div>
+                            <h3>Analysis</h3>
+                            <p>We begin our conjourations by doing a set of analysis. We use data sience to figure out exactly what we're going to conjoure. We use both statistics and color theory to apply the best design. We then research what data we're going to need to optimize the site.</p>
+                        </div>       
                     </li>
                     <li>
+                        <img src="img/front/design.jpg" title="Design" alt="Image of design">
                         <!--<div class="design"></div>-->
-                        <h3>Design</h3>
-                        <p>We optimize all our sites for optimal reading. We also chose colors of high contrast, to increase readability. We're also artistic, we love to design! But firstmost comes usability.</p>
+                        <div>
+                            <h3>Design</h3>
+                            <p>We optimize all our sites for optimal reading. We also chose colors of high contrast, to increase readability. We're also artistic, we love to design! But firstmost comes usability.</p>
+                        </div>
                     </li>
                     <li>
+                        <img src="img/front/development.jpg" title="Development" alt="Image of development">
                         <!--<div class="development"></div>-->
-                        <h3>Development</h3>
-                        <p>We use several languages of logic to cunstruct our sites. Among the languages we use are HTML5, CSS3, SCSS, Javascript, PHP, SQL, Kotlin, Java, C#, Visual Basic. </p>
-                        <br />
-                        <p>We simply love to learn everything about programming, programming is our true passion. We've developed many projects over the years.</p>
+                        <div>
+                            <h3>Development</h3>
+                            <p>We use several languages of logic to cunstruct our sites. Among the languages we use are HTML5, CSS3, SCSS, Javascript, PHP, SQL, Kotlin, Java, C#, Visual Basic. </p>
+                            
+                            <p>We simply love to learn everything about programming, programming is our true passion. We've developed many projects over the years.</p>
+                        </div>
+                        
                     </li>
                 </ul>
             </div>
@@ -67,15 +90,53 @@
         <section class="newsletter">
             <h2>Sign up for our newsletter</h2>
             <div class="input">
-                <input type="text"><button class="btn">Sign me up!</button>
+                <form action="#">
+                    <label for="newsletter">Email:</label><br />
+                    <input name="newsletter" placeholder="email@email.com" type="text"><button type="submit" class="btn">Sign me up!</button>
+                </form>
             </div>
         </section>
-
-
-
-        <div>
-           
-        </div>
+        <h1 style="padding: 4rem;">Our finished products</h1>
+        <section class="products">
+            
+            <div class="productDisplay">
+                <img src="img/mrfixthumb.png" class="product_img" title="Mr.fix webshop" alt="Mr fix">
+                <h5 class="product_name">Mr. fix</h5>
+                <div class="product_price">$ 2,500</div>
+                <div class="product_language">PhP</div>
+                <div class="delivery_time">1/2 year</div>
+                <div class="product_contributor">Borgar Flaen Stensrud</div>
+                <a class="product_btn" href="https://www.laravel.mrfix.no">Visit site</a>
+            </div>
+            <div class="productDisplay">
+                <img src="img/gallery/ucweb.png" class="product_img" title="Under construction web website" alt="Under construction web">
+                <h5 class="product_name">Under construction web</h5>
+                <div class="product_price">$ 1,000</div>
+                <div class="product_language">HTML5</div>
+                <div class="delivery_time">2 weeks</div>
+                <div class="product_contributor">Borgar Flaen Stensrud</div>
+                <a class="product_btn" href="index.html">Visit site</a>
+            </div>
+            <div class="productDisplay">
+                <img src="img/gallery/vg.png" class="product_img" title="Vg.no" alt="vg.no">
+                <h5 class="product_name">VG</h5>
+                <div class="product_price">$ 2,500</div>
+                <div class="product_language">PhP</div>
+                <div class="delivery_time">1/2 year</div>
+                <div class="product_contributor">Borgar Flaen Stensrud</div>
+                <a class="product_btn" href="http://www.vg.no">Visit site</a>
+            </div>
+            <div class="productDisplay">
+                <img src="img/gallery/komplett.png" class="product_img" title="Komplett.no" alt="Komplett.no">
+                <h5 class="product_name">Komplett</h5>
+                <div class="product_price">$ 2,500</div>
+                <div class="product_language">PhP</div>
+                <div class="delivery_time">1/2 year</div>
+                <div class="product_contributor">Borgar Flaen Stensrud</div>
+                <a class="product_btn" href="http://www.komplett.no">Visit site</a>
+            </div>
+        </section>
+      
 
         <footer>
             <div class="footerWrapper">
@@ -102,8 +163,20 @@
                         <li><a class="footerLink" href="https://github.com/borgar90"><img src="img/github.png"  class="github" alt="Github"></a></li>
                     </ul>
                 </div>
+                <div class="footernavWrapper">
+                    <h2 class="footerHeader">Menu</h2>
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="product.html">Product</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
-            <p class="copyright">Copyright Borgar Flaen Stensrud 2022</p>
+            <p class="copyright">Copyright Borgar Flaen Stensrud 2022 <br> This project was initiated in september 2022</p>
+            
         </footer>
         
     </body>

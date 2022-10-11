@@ -1,3 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+*,*::before, *::after{
+    box-sizing: inherit;
+}
+
+/* By using rem CSS units, components will change size when the root font size changes */
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; /* 10px / 16px = 62.5% -> 1 rem = 10 px */
+}
+
+
+
+
 /**************/
 /* TYPOGRAPHY */
 /**************/
@@ -17,43 +36,44 @@ h3{font-size: 4rem; font-family:harmony;}
 h4{font-size: 3rem; font-family:harmony;}
 h5{font-size: 2.5rem; margin-top: 20px; margin-bottom: 20px; font-family:harmony;}
 
-p, li, a{font-family: abayah; font-size: 2rem;}
+p, li, a, table, div{font-family: abayah; font-size: 2rem; line-height: 1.5;}
+
+p{
+    margin: 1.5rem 0rem;
+}
 
 .menu li a {
     font-size: 4rem;
 }
 
-/*******************/
-/* TYPOGRAPHY END */
-/*****************/
+/* changing root font size to affect rem */ 
 
-*{
-    margin: 0;
-    padding: 0;
-}
-
-*,*::before, *::after{
-    box-sizing: inherit;
-}
-
-html{
-    box-sizing: border-box;
-    font-size: 62.5%;  
-}
-
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 80rem) {
     html{
         font-size: 50%;
     }
 }
-
-@media only screen and (max-width: 427px) {
-    h1{font-size: 3rem;}
-    h2{font-size: 2.5rem;}
-    h3{font-size: 2rem;}
-    h4{font-size: 1.5rem;}
-    h5{font-size: 1rem;}
+@media only screen and (max-width: 61.3rem) {
+    html{
+        font-size: 40%;
+    }
 }
+@media only screen and (max-width: 40rem) {
+    h1{
+        font-size: 2.5rem;
+    }
+    
+}
+
+
+
+/*******************/
+/* TYPOGRAPHY END */
+/*****************/
+
+
+
+
 
 
 header{
@@ -66,12 +86,12 @@ header section{
     background:#634A90;
     color: white;
     width: 100%;
-    padding: 40px;
-    
+    padding: 4rem;
+    height: 30rem;
 }
 
 header nav{
-    padding: 40px;
+    padding: 4rem;
     margin: 0px;
     height: auto;
     width: 100%;
@@ -79,11 +99,10 @@ header nav{
     flex-wrap: wrap;
     justify-content: space-between;
     flex-direction: row;
-    line-height: 100px;
 }
 header nav img{
-    width: 100px;
-    height: 100px;
+    width: 10rem;
+    height: 10rem;
 }
 .logoAndNavWrapper{
     display: flex;
@@ -97,7 +116,7 @@ header nav img{
 }
 .logoAndNavWrapper h1{
     font-family: harmony;
-    margin-left: 20px;
+    margin-left: 2rem;
     color:white;
 }
 
@@ -105,7 +124,7 @@ nav ul{
     padding: 0px;
     margin:0px;
     list-style: none;
-    padding-left: 40px;
+    padding-left: 4rem;
     margin: 0px;
     display: flex;
     justify-content: space-between;
@@ -139,6 +158,7 @@ nav ul li a{
     list-style-type: none;
     margin: 0;
     padding: 0;
+    align-items: center;
   }
   
   .menu > li {
@@ -146,12 +166,12 @@ nav ul li a{
     overflow: hidden;
   }
   .menu:last-child{
-      margin-right: 40px;
+      margin-right: 40rem;
   }
   .menu-button-container {
     display: none;
-    height: 100%;
-    width: 30px;
+    height: 0.4rem;
+    width: 3rem;
     cursor: pointer;
     flex-direction: column;
     justify-content: center;
@@ -169,20 +189,20 @@ nav ul li a{
   display: block;
   background-color: white;
   position: absolute;
-  height: 4px;
-  width: 30px;
+  height: 0.4rem;
+  width: 3rem;
   transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
   border-radius: 2px;
 }
 
 .menu-button::before {
     content: "";
-    margin-top: -8px;
+    margin-top: -0.8rem;
   }
   
   .menu-button::after {
     content: "";
-    margin-top: 8px;
+    margin-top: 0.8rem;
   }
   
   #menu-toggle:checked + .menu-button-container .menu-button::before {
@@ -223,8 +243,7 @@ nav ul li a{
   }
   .menu {
     position: absolute;
-    top: 195px;
-    margin-top: 50px;
+    top: 30rem;
     left: 0;
     flex-direction: column;
     width: 100%;
@@ -268,7 +287,7 @@ nav ul li a{
 
 
 .headerContent{
-    padding:40px;
+    padding:4rem;
 }
 
 header section h1 {
@@ -278,7 +297,7 @@ header section h1 {
 }
 
 .mainContent{
-    padding: 40px;
+    padding: 4rem;
     /*background-image: url("../img/bg.jpg");*/
     background-color: white;
     background-size: auto;
@@ -292,67 +311,7 @@ header section h1 {
     font-family:harmony;
 }
 
-/* about us */
 
-.aboutUs ul{ 
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    flex-direction: row;
-}
-
-.aboutUs ul li{
-    list-style:none;
-    min-width: 400px;
-    max-width: 400px;
-    padding: 20px;
-    margin-right:20px;
-    background-color: #2F4858;
-    filter:drop-shadow(.5rem .5rem 1rem #000);
-    color:white;
-}
-
-.aboutUs ul li:last-child{
-    margin-right: 0px;
-}
-
-.analysis{
-    background-image: url("../img/data-analysis.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center, 0px;
-    min-width: 100%;
-    min-height: 50px;
-    text-align: center;
-   
-}
-
-.design{
-    background-image: url("../img/sketch.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center, 0px;
-    min-width: 100%;
-    min-height: 50px;
-    text-align: center;
-}
-
-.development{
-    background-image: url("../img/web-programming.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center, 0px;
-    min-width: 100%;
-    min-height: 50px;
-    text-align: center;
-}
-
-
-.aboutUs ul li h3{
-    margin-bottom: 20px;
-    font-family:harmony;
-    font-size: 2rem;
-}
 
 .newsletter{
     background:#D40063;
@@ -375,10 +334,13 @@ header section h1 {
 }
 .btn{
     color: white;
-    background: rgb(233,6,36);
+    background: #2F4858;
     padding: 20px;
     margin-left: 20px;
     cursor: pointer;
+}
+.btn:hover{
+    background-color: #634A90;
 }
 
 
@@ -422,8 +384,8 @@ header section h1 {
 }
   
 .newsletter div input{
-    padding: 20px;
-    width: 300px;
+    padding: 2rem;
+    width: 30rem;
 }
 footer{
     background-color: #634A90;
@@ -431,26 +393,45 @@ footer{
     position: static;
     bottom: 0px;
     width: 100%;
-    padding: 40px;
+    padding: 4rem;
     font-family: harmony;
 }
+.logoWrapper{
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+.logoWrapper img{
+    width: 7rem;
+    height: 7rem;
+    margin-right: 2rem;
+}
+
+footer .logoWrapper{
+    justify-content: center;
+    margin-bottom: 4rem;
+}
 .footerHeader{
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
 }
 .footerWrapper{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-wrap: wrap;
     background-color: #2F4858;
 }
 .footerWrapper div{
-    padding: 20px;
+    padding: 2rem;
     background-color: #2F4858;
 }
 
 .footerWrapper ul {
     list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
 }
 
 .footerWrapper ul li{
@@ -461,29 +442,495 @@ footer{
     color:white;
 }
 .copyright{
-    margin-top:40px;
+    margin-top:4rem;
     font-family: harmony;
     text-align: center;
 }
 .footerLink{
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
 }
 
 .footerLink img{
-    max-width: 100px;
+    max-width: 10rem;
 }
 .linkedin{
-    width:50px;
+    width:5rem;
 }
 .github{
-    margin-left: -5px;
+    margin-left: -0.5rem;
+}
+.footernav li{
+    display: block;
 }
 @media only screen and (max-width: 723px) {
     .footerWrapper{
         flex-direction: column;
-        padding-left: 40px;
+        padding-left: 4rem;
     }
     .footerWrapper div{
         padding-left:0px;
     }
  }
+
+
+ /**************/
+ /**INDEX.html*/
+ /************/
+ 
+
+#indexBanner{
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    color:black;
+    flex-wrap: wrap;
+}
+
+header section div{
+    padding: 4rem;
+    text-align: center;
+}
+header section div p{
+    max-width: 27rem;
+}
+header section img{
+    width: 50rem;
+}
+
+#headerLineIndex{
+    background-color: #634A90;
+    color: white;
+    padding: 4rem;
+}
+
+@media only screen and (max-width: 1217px) {
+    header section img{
+        display: none;
+    }
+    header section{
+        justify-content: center;
+    }
+}
+
+  /* about us section */
+
+.aboutUs ul{ 
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.aboutUs ul li{
+    list-style:none;
+    min-width: 400px;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    margin-right:20px;
+    
+    background-color: white;
+    filter:drop-shadow(.5rem .5rem 1rem #000);
+    color:black;
+}
+
+
+.aboutUs ul li img{
+    height: 250px;
+}
+.aboutUs ul li div{
+    padding: 2rem;
+}
+
+.aboutUs ul li:last-child{
+    margin-right: 0rem;
+}
+
+
+
+.aboutUs ul li h3{
+    margin-bottom: 2rem;
+    font-family:harmony;
+}
+
+
+.products{
+    grid-column: center-start / center-end;
+    margin: 0 4rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 7rem;
+    margin-bottom: 4rem;
+}
+.productDisplay{
+    background-color: #f9f7f6;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 3.5rem;
+}
+.product_img{
+    width: 100%;
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    z-index: 1;
+}
+.product_name{
+    grid-row: 1/2;
+    z-index: 3;
+    justify-self: center;
+    -ms-flex-item-align: end;
+    align-self: end;
+    grid-column: 1/-1;
+    font-size: 1.6rem;
+    text-align: center;
+    padding: 1.25rem;
+    background-color: #2F4858;
+    color: #fff;
+    font-weight: 400;
+    width: 80%;
+    -webkit-transform: translateY(50%);
+    transform: translateY(50%);
+}
+
+.product_price, .product_language, .product_contributor, .delivery_time{
+    margin: 0rem 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.product_btn{
+    grid-column: 1/-1;
+    background-color: #634A90;
+    color: #fff;
+    border: none;
+    border-radius: 0;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    padding: 1.8rem 3rem;
+    cursor: pointer;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+    text-align: center;
+    text-decoration: none;
+}
+.product_btn:hover{
+    background-color: #D40063;
+    text-decoration: underline;
+}
+
+
+
+
+/********************/
+/*** PRODUCT.html **/
+/******************/
+
+
+#mainContentProduct{
+    background: url(../img/swirl.png);
+    padding: 4rem;
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: cover;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    column-gap: 4rem;
+}
+
+
+
+
+
+.product{
+    width: 80rem;
+    background-color: white;
+    filter:drop-shadow(.5rem .5rem 1rem #000);
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "photo content";
+    overflow: hidden;
+    
+}
+
+ 
+/* Change the grid to two row setup  and removes Background*/
+
+@media only screen and (max-width: 1325px) {
+    .product{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+        grid-template-areas: "photo"
+                             "content"; 
+        width: 100%;
+    }
+    .product img{
+        width: 100%;
+    }
+    #mainContentProduct{
+        background: white;
+    }
+}
+
+
+
+.product:first{
+    margin-top:0px;
+}
+.product a img{
+    grid-area: photo;
+    height: 100%;
+    max-width: 200%;
+}
+.product .content{
+    padding:4rem;
+    background:#2F4858;
+    color: white;
+    grid-area: content;
+}
+.product h2{
+    font-family: harmony;
+    font-size: 4rem;
+    color: white;
+}
+
+.product a{
+    text-decoration: none;
+    color: #000;
+}
+
+
+
+.menuBar{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
+    padding-bottom: 2rem;
+}
+.menuBar .btnProd{
+    width: 100%;
+    height: 5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: abayah;
+}
+.wishlist{
+    border:solid 1px #000;
+    color: #000;
+    background-color: white;
+}
+.product .buy{
+    background-color: #000;
+    border: #000 1px solid;
+    color: white;
+}
+
+
+/****************/
+/* TABLE STYLES */
+/***************/
+
+#productTable{
+    padding: 4rem;
+}
+
+table{
+    width: 100%;
+    margin-top: 4rem;
+}
+
+table tr th{
+    text-align: left;
+    padding: 2rem;
+}
+
+table tr td {
+    padding: 2rem;
+}
+
+#thHeader{
+    background-color: #334E7B;
+    color: white;
+}
+
+#tr1, #tr3{
+    background-color: white;
+}
+
+#tr2, #tr4{
+    background: #2F4858;
+    color: white;
+}
+
+/*********************/
+/* TABLE STYLES END */
+/*******************/
+
+
+/*********************/
+/**** ABOUT.html ****/
+/*******************/
+#mainContentAbout{
+    background-color: white;
+    padding: 40px;
+}
+
+#mainContentAbout h2{
+    font-size: 3rem;
+    font-family: harmony;
+}
+
+#aboutWrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+.ingress{
+    width: 400px;
+    background-color: #2F4858;
+    padding: 20px;
+    color: white;
+}
+.ingress h3{
+    margin-bottom: 20px;
+}
+.employees{
+    width: 700px;
+    border:1px solid #2F4858;
+    padding: 40px;
+    padding-top: 20px;
+}
+
+.employees img{
+    float: left;
+    border-radius: 50%;
+    width: 100px;
+    margin-right: 40px;
+    margin-top: 20px;
+    filter: drop-shadow(1px 2px 3px black);
+}
+
+.empCont{
+    margin-top: 20px;
+}
+.empCont h4{
+    margin-bottom: 20px;
+}
+
+.empCont h5{
+    margin: 20px 0px;
+}
+
+hr{
+    height: 15px;
+    background: #2F4858;
+    border: none;
+}
+
+@media only screen and (max-width: 1236px) {
+   
+}
+@media only screen and (max-width: 1196px) {
+    .ingress{
+        margin-bottom: 40px;
+        width: 100%;
+    }
+    .employees{
+        width: 100%;
+    }
+ }
+
+
+
+
+
+ /********************/
+ /**** CONTACT.html */
+ /******************/
+
+ #mainContentContact{
+    background-color: white;
+}
+#contentWrapperContact{
+    padding: 4rem;
+}
+
+#contentWrapperContact h2{
+    font-family: harmony;
+    margin-bottom: 4rem;
+}
+.formAndInfoWrapper form {
+    border: 1px solid #2F4858;
+    padding:2rem;
+}
+.formAndInfoWrapper form input{
+    display:block;
+    border:.025rem solid black;
+    margin-bottom: 2rem;
+    width: 100%;
+    height: 5rem;
+    padding: 2rem;
+}
+
+.formAndInfoWrapper form textarea{
+    border:.025rem solid black;
+    padding: 2rem;
+    display: block;
+}
+#submit{
+    background-color: #2F4858;
+    border: none;
+    color: white;
+    padding: 2rem;
+    margin-top: 2rem;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+}
+.formAndInfoWrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+
+
+
+.info{
+    color: white;
+    background-color: #2F4858;
+    padding: 4rem;
+    width: 60rem;
+}
+
+.info ul li {
+    list-style: none;
+}
+.info a{
+    color: white;
+}
+.infoHeader{
+    margin:2rem 0rem;
+}
+
+
+@media only screen and (max-width: 1018px) {
+    .info{
+        width: 100%;
+        margin-left: 0px;
+    }
+    .formAndInfoWrapper form input, form, form textarea{
+        width: 100%;
+    }
+}
