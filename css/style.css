@@ -528,8 +528,7 @@ footer .logoWrapper{
 
 .aboutUs ul li{
     list-style:none;
-    min-width: 400px;
-    max-width: 400px;
+    max-width: 40rem;
     display: flex;
     flex-direction: column;
     margin-right:20px;
