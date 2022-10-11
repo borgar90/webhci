@@ -515,7 +515,9 @@ footer .logoWrapper{
 }
 
   /* about us section */
-
+.aboutUs{
+    width: 100%;
+}
 .aboutUs ul{ 
     display: flex;
     justify-content: flex-start;
