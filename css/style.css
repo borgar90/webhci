@@ -488,14 +488,14 @@ footer .logoWrapper{
     flex-wrap: wrap;
 }
 
-header section div{
+#indexBanner div{
     padding: 4rem;
     text-align: center;
 }
-header section div p{
+#indexBanner div p{
     max-width: 27rem;
 }
-header section img{
+#indexBanner img{
     width: 50rem;
 }
 
@@ -506,10 +506,10 @@ header section img{
 }
 
 @media only screen and (max-width: 1217px) {
-    header section img{
+    #indexBanner img{
         display: none;
     }
-    header section{
+    #indexBanner{
         justify-content: center;
     }
 }
