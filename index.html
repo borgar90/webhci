@@ -5,8 +5,8 @@
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/home.css">
        <meta charset="UTF-8">
-       <meta name="description" content="">
-       <meta name="keywords" content="">
+       <meta name="description" content="Homepage of under construction web">
+       <meta name="keywords" content="Under construction web">
        <meta name="author" content="Borgar Flaen Stensrud">
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
@@ -22,10 +22,12 @@
                         <h1>Under construction web</h1>
                     </a>
                 </div>
+                <!--This is a hack for a site without javascript-->
                 <input id="menu-toggle" type="checkbox" >
                 <label class="menu-button-container" for="menu-toggle">
                     <div class="menu-button"></div>
                 </label>
+                <!--End of hack-->
                 
                 <ul class="menu">
                     <li><a href="index.html">Home</a></li>
@@ -38,6 +40,7 @@
             
 
         </header>
+        <!--Indexbanner, special banner for index page-->
         <section id="indexBanner">
             <div>
                 <h1>Designer</h1>
@@ -48,36 +51,47 @@
                 <h1>&#60; Coder &#62;</h1>
                 <p>Full stack developer who writes clean, elegant and efficient code.</p>
             </div>
-            
+        
         </section>
+        <!--END OF INDEX BANNER-->
+        <!--HEADER TAG LINE-->
         <section id="headerLineIndex">
             <h1>This is our product page</h1>
             <p>This page consists of a list of our products</p>
         </section>
+        <!--END OF HEADER TAG LINE-->
         <section class="mainContent">
             <h2>We're wizzards that conjoure websites</h2>
             <div class="aboutUs">
                 <ul>
                     <li>
-                        <img src="img/front/analysis.jpg" title="Analysis" alt="Image of analysis">
+                        <div class="aboutImg">
+                            <img src="img/front/analysis.jpg" title="Analysis" alt="Image of analysis">
+                        </div>
                         <!--<div class="analysis"></div>-->
-                        <div>
+                        <div class="aboutInfo">
                             <h3>Analysis</h3>
                             <p>We begin our conjourations by doing a set of analysis. We use data sience to figure out exactly what we're going to conjoure. We use both statistics and color theory to apply the best design. We then research what data we're going to need to optimize the site.</p>
                         </div>       
                     </li>
                     <li>
-                        <img src="img/front/design.jpg" title="Design" alt="Image of design">
+                        <div class="aboutImg">
+                            <img src="img/front/design.jpg" title="Design" alt="Image of design">
+                        </div>
+                        
                         <!--<div class="design"></div>-->
-                        <div>
+                        <div class="aboutInfo">
                             <h3>Design</h3>
                             <p>We optimize all our sites for optimal reading. We also chose colors of high contrast, to increase readability. We're also artistic, we love to design! But firstmost comes usability.</p>
                         </div>
                     </li>
                     <li>
-                        <img src="img/front/development.jpg" title="Development" alt="Image of development">
+                        <div class="aboutImg">
+                            <img src="img/front/development.jpg" title="Development" alt="Image of development">
+                        </div>
+                        
                         <!--<div class="development"></div>-->
-                        <div>
+                        <div class="aboutInfo">
                             <h3>Development</h3>
                             <p>We use several languages of logic to cunstruct our sites. Among the languages we use are HTML5, CSS3, SCSS, Javascript, PHP, SQL, Kotlin, Java, C#, Visual Basic. </p>
                             
@@ -93,7 +107,7 @@
             <div class="input">
                 <form action="#">
                     <label for="newsletter">Email:</label><br />
-                    <input name="newsletter" placeholder="email@email.com" type="text"><button type="submit" class="btn">Sign me up!</button>
+                    <input name="newsletter" placeholder="email@email.com" type="email" required><button type="submit" class="btn">Sign me up!</button>
                 </form>
             </div>
         </section>
@@ -139,6 +153,7 @@
         </section>
       
 
+        <!--FOOTER-->
         <footer>
             <div class="footerWrapper">
                 <div class="adressWrapper">
@@ -180,5 +195,6 @@
             
         </footer>
         
+        <!--End of footer-->
     </body>
 </html>

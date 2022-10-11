@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    
 }
 
 *,*::before, *::after{
@@ -34,7 +35,7 @@ h1{font-size: 6rem; font-family:harmony;}
 h2{font-size: 5rem; font-family:harmony;}
 h3{font-size: 4rem; font-family:harmony;}
 h4{font-size: 3rem; font-family:harmony;}
-h5{font-size: 2.5rem; margin-top: 20px; margin-bottom: 20px; font-family:harmony;}
+h5{font-size: 2.5rem; margin-top: 2rem; margin-bottom: 2rem; font-family:harmony;}
 
 p, li, a, table, div{font-family: abayah; font-size: 2rem; line-height: 1.5;}
 
@@ -46,35 +47,64 @@ p{
     font-size: 4rem;
 }
 
+hr{
+    height: 1.5rem;
+    background: #2F4858;
+    border: none;
+}
+
 /* changing root font size to affect rem */ 
 
-@media only screen and (max-width: 80rem) {
+@media only screen and (max-width: 1134px) {
     html{
         font-size: 50%;
     }
 }
-@media only screen and (max-width: 61.3rem) {
+@media only screen and (max-width: 911px) {
     html{
         font-size: 40%;
     }
 }
-@media only screen and (max-width: 40rem) {
+@media only screen and (max-width: 732px) {
+    h1{
+        font-size: 4.5rem;
+    }
+    
+}
+@media only screen and (max-width: 578px) {
+    h1{
+        font-size: 3.5rem;
+    }
+    
+}
+@media only screen and (max-width: 474px) {
     h1{
         font-size: 2.5rem;
     }
     
 }
-
+@media only screen and (max-width: 440px) {
+    h1{
+        font-size: 1.5rem;
+    }
+    h3, h2{
+        font-size: 1.5rem !important;
+    }
+    header nav img {
+        width: 5rem !important;
+        height:5rem !important;
+    }
+    
+}
 
 
 /*******************/
 /* TYPOGRAPHY END */
 /*****************/
 
-
-
-
-
+/*******
+****HEADER START
+********/
 
 header{
     background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../img/code.jpg);
@@ -82,16 +112,9 @@ header{
     background-size: cover;
     background-position: left top;
 }
-header section{
-    background:#634A90;
-    color: white;
-    width: 100%;
-    padding: 4rem;
-    height: 30rem;
-}
+
 
 header nav{
-    padding: 4rem;
     margin: 0px;
     height: auto;
     width: 100%;
@@ -99,23 +122,28 @@ header nav{
     flex-wrap: wrap;
     justify-content: space-between;
     flex-direction: row;
+    padding: 4rem;
 }
 header nav img{
     width: 10rem;
     height: 10rem;
+}
+.title{
+    background:#634A90;
+    color: white;
+    width: 100%;
+    padding: 4rem;
 }
 .logoAndNavWrapper{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
-    line-height: 100px;
 }
 .logoAndNavWrapper a{
     text-decoration: none;
 }
 .logoAndNavWrapper h1{
-    font-family: harmony;
     margin-left: 2rem;
     color:white;
 }
@@ -192,7 +220,7 @@ nav ul li a{
   height: 0.4rem;
   width: 3rem;
   transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
-  border-radius: 2px;
+  border-radius: 0.2rem;
 }
 
 .menu-button::before {
@@ -219,7 +247,7 @@ nav ul li a{
     transform: rotate(-405deg);
   }
 
-@media (max-width:904px) {
+@media (max-width:1284px) {
     .logoAndNavWrapper{
         align-items: center;
         flex-direction: column;
@@ -236,21 +264,23 @@ nav ul li a{
     line-height: normal;
     flex-direction: column;
     align-items: center;
+    padding: 0px;
     }
   .menu-button-container {
     display: flex;
-    margin-top: 20px;
+    margin: 2rem 0px;
   }
   .menu {
-    position: absolute;
-    top: 30rem;
-    left: 0;
     flex-direction: column;
     width: 100%;
     justify-content: center;
     align-items: center;
     z-index: 999;
+    display: flex;
   }
+  .menu:last-child {
+    margin-right: 0px;
+    }
   #menu-toggle ~ .menu li {
     height: 0;
     margin: 0;
@@ -285,68 +315,72 @@ nav ul li a{
 /*Hamburger menu end  */ 
 
 
+/*******
+****HEADER END
+********/
 
-.headerContent{
-    padding:4rem;
-}
-
-header section h1 {
-    font-size: 4rem;
-    margin-top: 0px;
-    font-family: harmony;
-}
-
+/***
+**** MAIN CONTENT **
+****/
 .mainContent{
     padding: 4rem;
-    /*background-image: url("../img/bg.jpg");*/
     background-color: white;
-    background-size: auto;
     background-repeat: no-repeat;
 }
 
 .mainContent h2{
-    margin-bottom: 80px;
+    margin-bottom: 8rem;
     color: black;
     font-size: 4rem;
     font-family:harmony;
 }
 
-
-
+/***
+**** MAIN CONTENT END **
+****/
+/***
+**** NEWS LETTER **
+****/
 .newsletter{
     background:#D40063;
     color: white;
     font-family: harmony;
-    background-position:-300px, 0px;
-    background-repeat: no-repeat;
-    height:auto;
     width: 100%;
     background-size: 100%;
-    padding: 40px;
+    padding: 4rem;
     font-size: 2rem;
 }
 
 .newsletter h2{
-    margin-bottom: 40px;
+    margin-bottom: 4rem;
 }
 .input{
-    margin-bottom: 40px;
+    margin-bottom: 4rem;
 }
 .btn{
     color: white;
     background: #2F4858;
-    padding: 20px;
-    margin-left: 20px;
+    padding: 2rem;
+    margin-left: 2rem;
     cursor: pointer;
 }
 .btn:hover{
     background-color: #634A90;
 }
+.newsletter div input{
+    padding: 2rem;
+    width: 30rem;
+    max-width: 100%;
+}
 
+/***
+**** NEWS LETTER END **
+****/
+/********* about us mediaquery ***/
 
 @media only screen and (max-width: 1336px) {
     .aboutUs ul li{
-        margin-bottom: 40px;
+        margin-bottom: 4rem;
     }
     .aboutUs ul li:last-child{
         margin-bottom: 0px;
@@ -355,7 +389,7 @@ header section h1 {
         justify-content: start;
     }
 }
-
+/********* about us mediaquery span of about us***/
 @media only screen and (max-width: 936px) {
 
     .aboutUs ul {
@@ -367,26 +401,15 @@ header section h1 {
     
 }
 
-@media only screen and (max-width: 916px) {
-
-    
-    
-}
-
-
-
 @media only screen and (max-width: 516px) {
-    
-     
     .btn{
         margin: 0px;
     }
 }
   
-.newsletter div input{
-    padding: 2rem;
-    width: 30rem;
-}
+/***
+**** FOOTER **
+****/
 footer{
     background-color: #634A90;
     color: white;
@@ -472,6 +495,10 @@ footer .logoWrapper{
     }
  }
 
+/***
+**** FOOTER  END**
+****/
+
 
  /**************/
  /**INDEX.html*/
@@ -531,7 +558,7 @@ footer .logoWrapper{
     max-width: 40rem;
     display: flex;
     flex-direction: column;
-    margin-right:20px;
+    margin-right:2rem;
     
     background-color: white;
     filter:drop-shadow(.5rem .5rem 1rem #000);
@@ -540,10 +567,21 @@ footer .logoWrapper{
 
 
 .aboutUs ul li img{
-    height: 250px;
+    display: block;
+  max-width:100%;
+  max-height:30rem;
+  width: auto;
+  height: auto;
+  
 }
-.aboutUs ul li div{
+
+.aboutUs .aboutInfo{
     padding: 2rem;
+}
+.aboutImg{
+    background-color: #334E7B;
+    display: flex;
+    justify-content: center;
 }
 
 .aboutUs ul li:last-child{
@@ -590,7 +628,6 @@ footer .logoWrapper{
     padding: 1.25rem;
     background-color: #2F4858;
     color: #fff;
-    font-weight: 400;
     width: 80%;
     -webkit-transform: translateY(50%);
     transform: translateY(50%);
@@ -624,6 +661,9 @@ footer .logoWrapper{
 
 
 
+ /******************/
+ /**INDEX.html END*/
+ /****************/
 
 /********************/
 /*** PRODUCT.html **/
@@ -725,13 +765,13 @@ footer .logoWrapper{
     font-family: abayah;
 }
 .wishlist{
-    border:solid 1px #000;
+    border:solid 0.1rem #000;
     color: #000;
     background-color: white;
 }
 .product .buy{
     background-color: #000;
-    border: #000 1px solid;
+    border: #000 0.1rem solid;
     color: white;
 }
 
@@ -776,13 +816,16 @@ table tr td {
 /* TABLE STYLES END */
 /*******************/
 
+/***********************/
+/*** PRODUCT.html END **/
+/***********************/
 
 /*********************/
 /**** ABOUT.html ****/
 /*******************/
 #mainContentAbout{
     background-color: white;
-    padding: 40px;
+    padding: 4rem;
 }
 
 #mainContentAbout h2{
@@ -794,57 +837,51 @@ table tr td {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    margin-top: 40px;
+    margin-top: 4rem;
     flex-wrap: wrap;
 }
 .ingress{
-    width: 400px;
+    width: 40rem;
     background-color: #2F4858;
-    padding: 20px;
+    padding: 2rem;
     color: white;
 }
 .ingress h3{
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
 }
 .employees{
-    width: 700px;
-    border:1px solid #2F4858;
-    padding: 40px;
-    padding-top: 20px;
+    width: 70rem;
+    border:.1rem solid #2F4858;
+    padding: 4rem;
+    padding-top: 2rem;
 }
 
 .employees img{
     float: left;
     border-radius: 50%;
-    width: 100px;
-    margin-right: 40px;
-    margin-top: 20px;
-    filter: drop-shadow(1px 2px 3px black);
+    width: 10rem;
+    margin-right: 4rem;
+    margin-top: 2rem;
+    filter: drop-shadow(.1rem .2rem .3rem black);
 }
 
 .empCont{
-    margin-top: 20px;
+    margin-top: 2rem;
 }
 .empCont h4{
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
 }
 
 .empCont h5{
-    margin: 20px 0px;
+    margin: 2rem 0px;
 }
 
-hr{
-    height: 15px;
-    background: #2F4858;
-    border: none;
-}
 
-@media only screen and (max-width: 1236px) {
-   
-}
+
+/* About media query to span ingress and employees across site width*/
 @media only screen and (max-width: 1196px) {
     .ingress{
-        margin-bottom: 40px;
+        margin-bottom: 0px;
         width: 100%;
     }
     .employees{
@@ -853,7 +890,9 @@ hr{
  }
 
 
-
+/*************************/
+/**** ABOUT.html END ****/
+/***********************/
 
 
  /********************/
@@ -871,8 +910,9 @@ hr{
     font-family: harmony;
     margin-bottom: 4rem;
 }
+/*contact Form styles */
 .formAndInfoWrapper form {
-    border: 1px solid #2F4858;
+    border: .1rem solid #2F4858;
     padding:2rem;
 }
 .formAndInfoWrapper form input{
@@ -905,8 +945,9 @@ hr{
     justify-content: start;
     flex-wrap: wrap;
 }
+/*contact Form styles end */
 
-
+/* Styles for contact info */
 
 .info{
     color: white;
@@ -924,8 +965,8 @@ hr{
 .infoHeader{
     margin:2rem 0rem;
 }
-
-
+/* Styles for contact info END */
+/*span contact info and form over page width -8rem(padding) */
 @media only screen and (max-width: 1018px) {
     .info{
         width: 100%;
@@ -935,3 +976,6 @@ hr{
         width: 100%;
     }
 }
+ /***********************/
+ /**** CONTACT.html END */
+ /***********************/
