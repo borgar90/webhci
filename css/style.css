@@ -55,40 +55,12 @@ hr{
 
 /* changing root font size to affect rem */ 
 
-@media only screen and (max-width: 1134px) {
+@media only screen and (max-width: 1024px) {
     html{
         font-size: 50%;
     }
 }
-@media only screen and (max-width: 911px) {
-    html{
-        font-size: 40%;
-    }
-}
-@media only screen and (max-width: 732px) {
-    h1{
-        font-size: 4.5rem;
-    }
-    
-}
-@media only screen and (max-width: 578px) {
-    h1{
-        font-size: 4rem;
-    }
-    
-}
 
-@media only screen and (max-width: 440px) {
-    
-    h3, h2{
-        font-size: 1.5rem !important;
-    }
-    header nav img {
-        width: 5rem !important;
-        height:5rem !important;
-    }
-    
-}
 
 
 /*******************/
@@ -142,8 +114,6 @@ header nav img{
 }
 
 nav ul{
-    padding: 0px;
-    margin:0px;
     list-style: none;
     padding-left: 4rem;
     margin: 0px;
@@ -151,14 +121,13 @@ nav ul{
     justify-content: space-between;
 }
 nav ul li{
-    padding: 0px;
-    margin: 0px;
     margin-right: 1rem;
     cursor:pointer;
 }
 
 nav ul li:hover{
     text-decoration: underline;
+    text-decoration-color: white;
 }
 
 nav ul li:last-child { 
@@ -186,123 +155,58 @@ nav ul li a{
     margin: 0 1rem;
     overflow: hidden;
   }
-  .menu:last-child{
-      margin-right: 40rem;
-  }
-  .menu-button-container {
-    display: none;
-    height: 0.4rem;
-    width: 3rem;
-    cursor: pointer;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
   
- #menu-toggle {
-    display: none;
-  }
 
-.menu-button,
-.menu-button::before,
-.menu-button::after {
-  display: block;
-  background-color: white;
-  position: absolute;
-  height: 0.4rem;
-  width: 3rem;
-  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
-  border-radius: 0.2rem;
+
+ .menuBtn{
+     display: none;
+     cursor: pointer;
+     transition:0.4s;
+ }
+
+.stripe1{
+    display: block;
+    width: 4rem;
+    border-top: .6rem solid white;
+    padding-top:.6rem;
+    cursor:pointer;
+    transition:0.4s;
+  }
+  
+  
+  
+   .stripe2 {     
+    display: block;
+    width: 4rem;
+    border-top: .6rem solid white;
+    padding-top:.5rem;  
+    display:fixed;
+    transition:0.4s;
+    }
+  
+  
+     .stripe3 {  
+    display: block;
+    width: 4rem;
+    border-top: .6rem solid white;
+    padding-top:.5rem;
+    transition:0.4s;
+  
+    }
+
+.change .stripe1 {
+
+    -webkit-transform: rotate(-45deg) translate(-1rem, .5rem);
+    transform: rotate(-45deg) translate(-1rem, .8rem);
+}
+        
+.change .stripe2 {opacity:0;}
+        
+.change .stripe3 {
+    -webkit-transform: rotate(45deg) translate(-1rem, .5rem);
+    transform: rotate(45deg) translate(-1rem, -.5rem);
 }
 
-.menu-button::before {
-    content: "";
-    margin-top: -0.8rem;
-  }
-  
-  .menu-button::after {
-    content: "";
-    margin-top: 0.8rem;
-  }
-  
-  #menu-toggle:checked + .menu-button-container .menu-button::before {
-    margin-top: 0px;
-    transform: rotate(405deg);
-  }
-  
-  #menu-toggle:checked + .menu-button-container .menu-button {
-    background: rgba(255, 255, 255, 0);
-  }
-  
-  #menu-toggle:checked + .menu-button-container .menu-button::after {
-    margin-top: 0px;
-    transform: rotate(-405deg);
-  }
-
-@media (max-width:1284px) {
-    .logoAndNavWrapper{
-        align-items: center;
-        flex-direction: column;
-    }
-}  
- 
-
-
-@media (max-width: 700px) {
-    h1{ line-height: normal;}
-    
-    header nav{
-        display: flex;
-    line-height: normal;
-    flex-direction: column;
-    align-items: center;
-    padding: 0px;
-    }
-  .menu-button-container {
-    display: flex;
-    margin: 2rem 0px;
-  }
-  .menu {
-    flex-direction: column;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    z-index: 999;
-    display: flex;
-  }
-  .menu:last-child {
-    margin-right: 0px;
-    }
-  #menu-toggle ~ .menu li {
-    height: 0;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
-  }
-  #menu-toggle:checked ~ .menu li {
-    border: 1px solid #333;
-    height: 3.5em;
-    padding: 0.5em;
-    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
-  }
-  .menu > li {
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0.5em 0;
-    width: 100%;
-    color: white;
-    background-color: #334E7B;
-  }
-  .menu > li:not(:last-child) {
-    border-bottom: 1px solid #444;
-  }
-  nav ul li a{
-    color: white;
-}
-}
 
 
 /*Hamburger menu end  */ 
@@ -335,11 +239,10 @@ nav ul li a{
 **** NEWS LETTER **
 ****/
 .newsletter{
-    background:#D40063;
+    background:#634A90;
     color: white;
     font-family: harmony;
     width: 100%;
-    background-size: 100%;
     padding: 4rem;
     font-size: 2rem;
 }
@@ -498,26 +401,6 @@ footer .logoWrapper{
  /************/
  
 
-#indexBanner{
-    padding: 0px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
-    color:black;
-    flex-wrap: wrap;
-}
-
-#indexBanner div{
-    padding: 4rem;
-    text-align: center;
-}
-#indexBanner div p{
-    max-width: 27rem;
-}
-#indexBanner img{
-    width: 50rem;
-}
 
 #headerLineIndex{
     background-color: #634A90;
@@ -525,14 +408,7 @@ footer .logoWrapper{
     padding: 4rem;
 }
 
-@media only screen and (max-width: 1217px) {
-    #indexBanner img{
-        display: none;
-    }
-    #indexBanner{
-        justify-content: center;
-    }
-}
+
 
   /* about us section */
 .aboutUs{
@@ -972,3 +848,187 @@ table tr td {
  /***********************/
  /**** CONTACT.html END */
  /***********************/
+
+/***********************/
+ /**** orderInquery.html */
+ /***********************/
+
+ #inqueryForm{
+     width: 50rem;
+     border: 1px solid black;
+     padding: 4rem;
+ }
+ #inqueryForm h2{
+     margin-bottom: 2rem;
+ }
+ 
+ #inqueryForm input{
+     width: 100%;
+     height: 4rem;
+     padding: 1rem;
+     margin-top: 1rem;
+     margin-bottom: 1rem;
+ }
+
+ #inqueryForm .submit{
+     color: white;
+     background-color: green;
+     width: 50%;
+    padding: 2rem;
+    margin-top: 2rem;
+    border: none;
+ }
+
+ #inqueryForm .reset{
+     color: white;
+     background-color: red;
+     width: 40%;
+    padding: 2rem;
+    margin-top: 2rem;
+    border: none;
+ }
+
+
+/*******************************/
+ /**** orderInquery.html END */
+ /***************************/
+
+
+
+
+
+
+
+ /******************
+ *********MODAL*****
+ ******************/ 
+
+ .modal{
+    display: none;
+ }
+
+
+
+ .modalActive{
+    display: flex !important;
+    justify-content: center;
+    background: white;
+    width: 60%;
+    margin: auto;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 1000;
+    height: auto;
+    box-shadow: 2px 2px 30px rgba(0,0,0,.2);
+    flex-direction: column;
+    padding: 2rem;
+    padding-top: 7rem;
+ }
+
+ .modalImg{
+    width:100%;
+    margin-top: 4rem;
+ }
+ .modalImg img{
+     width: 100%;
+ }
+ .modal .content{
+     padding: 2rem;
+ }
+ .modalTitle{
+     margin-top: 40px;
+     font-size: 4rem;
+     font-family: harmony;
+ }
+ .blurActive{
+    -webkit-filter: blur(10px);
+    -moz-filter: blur(10px);
+    -o-filter: blur(10px);
+    -ms-filter: blur(10px);
+    filter: blur(10px);
+ }
+ .exitModal{
+     position: absolute;
+     top: 1rem;
+     right: 1rem;
+     z-index: 10000;
+     cursor: pointer;
+     font-size: 4rem;
+ }
+ .modalInput{
+     width: 100%;
+     height: 5rem;
+     padding: 1rem;
+ }
+ .modalBtn{
+    background-color: #634A90;
+    color: #fff;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    border: none;
+    margin-top: 2rem;
+    cursor: pointer;
+ }
+
+ .modalBtn:hover{
+    background-color: #2F4858;
+    transition: all .25s;
+ }
+
+ .success{
+     color: green;
+ }
+
+
+@media (max-width:1024px) {
+   
+    .menu{
+        height:100%;
+        width:100%;
+        background-color:#634A90;
+        z-index:9999;
+        display:none;
+        text-align:center;
+        text-decoration-color: white;
+        flex-direction: column;
+    }
+    .menuBtn{
+        display: block;
+    }
+    .logoAndNavWrapper{
+        align-items: center;
+        flex-direction: column;
+    }
+    #indexBanner{
+        display:none;
+    }
+}  
+ 
+
+
+@media (max-width: 641px) {
+    h1{ line-height: normal;}
+    
+    header nav{
+        display: flex;
+    line-height: normal;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    }
+    
+    #indexBanner{
+        display:none;
+    }
+  
+}
+@media (min-width:1024px) {
+    .menu{
+        display: flex;
+        flex-direction: row;
+    }
+    
+}

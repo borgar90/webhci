@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Under construction web | Order</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/slider.css">
+       <meta charset="UTF-8">
+       <meta name="description" content="Homepage of under construction web">
+       <meta name="keywords" content="Under construction web">
+       <meta name="author" content="Borgar Flaen Stensrud">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/jquery.js"></script>
+
+    </head>
+    <body>
+        <div class="blurWrapper">
+            <header>
+            
+                <nav>
+                    <div class="logoAndNavWrapper">
+                        <a href="index.html">
+                            <img src="img/swirl.png" title="Under construction web" alt="Under construction web logo">
+                        </a>
+                        <a href="index.html">
+                            <h1>Under construction web</h1>
+                        </a>
+                    </div>
+                    
+                    <div class="menuBtnWrapper">
+                        <div class="menuBtn">
+                            <span class="stripe1"></span>
+                            <span class="stripe2"></span>
+                            <span class="stripe3"></span>
+    
+                        </div>
+                    </div>
+                    
+    
+                    <ul class="menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="product.html">Product</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="orderInquery.html">Order</a></li>
+                    </ul>
+                </nav>
+                
+                
+    
+            </header>
+            <!--HEADER TAG LINE-->
+            <section id="headerLineIndex">
+                <h1>This is our order inquery page</h1>
+                <p>This page consists of a contact form for order inqueries</p>
+            </section>
+            <!--END OF HEADER TAG LINE-->
+            <section class="mainContent">
+                <form id="inqueryForm" action="#" onsubmit="return inqueryFormValidate(this);">
+                    <h2>Inquery form</h2>
+                    <label for="firstNameInquery">First name: <span class="label"></span></label>
+                    <input type="text" name="firstNameInquery" id="firstNameInquery" placeholder="Erik">
+                    <span class="error"></span>
+                    
+                    <label for="lastNameInquery">Last name: <span class="label"></span></label>
+                    <input type="text" name="lastNameInquery" id="lastNameInquery" placeholder="Stensrud">
+                    <span class="error"></span>
+
+                    <label for="ageInquery">Age: <span class="label"></span></label>
+                    <input type="number" name="ageInquery" id="ageInquery" placeholder="30">
+                    <span class="error"></span>
+
+                    <label for="adressInquery">Adress: <span class="label"></span></label>
+                    <input type="text" name="adressInquery" id="adressInquery" placeholder="Bogstaveien 53">
+                    <span class="error"></span>
+
+                    <label for="tlfInquery">Telephone: <span class="label"></span></label>
+                    <input type="tel" name="tlfInquery" id="tlfInquery" placeholder="900 00 000" >
+                    <span class="error"></span>
+
+                    <button class="reset" type="reset">Reset</button>
+                    <button class="submit" type="submit">Submit</button>
+                </form>
+            </section>
+          
+    
+            <!--FOOTER-->
+            <footer>
+                <div class="footerWrapper">
+                    <div class="adressWrapper">
+                        <h2 class="footerHeader">Adress</h2>
+                        <ul class="contactList">
+                            <li>Adress: Bjørn farmannsgt 13</li>
+                            <li>Postal code: 3746</li>
+                            <li>City: Skien, Norway</li>
+                        </ul>
+                    </div>
+                    <div class="contactWrapper">
+                        <h2 class="footerHeader">Contact</h2>
+                        <ul class="contactList2">
+                            
+                            <li>Tel: <a href="tel:+4797501753">975 01 753</a></li>
+                            <li>Email: <a class="email" href="mailto:borgar90@gmail.com">Borgar Flaen Stensrud</a></li>
+                        </ul>
+                    </div>
+                    <div class="socialWrapper">
+                        <h2 class="footerHeader">Social</h2>
+                        <ul class="socialMedia">
+                            <li><a class="footerLink" href="https://www.linkedin.com/in/borgar-stensrud-0204181a/"><img src="img/linkedin.png" class="linkedin" alt="linkedin"></a></li>
+                            <li><a class="footerLink" href="https://github.com/borgar90"><img src="img/github.png"  class="github" alt="Github"></a></li>
+                        </ul>
+                    </div>
+                    <div class="footernavWrapper">
+                        <h2 class="footerHeader">Menu</h2>
+                        <nav>
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="product.html">Product</a></li>
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <p class="copyright">Copyright Borgar Flaen Stensrud 2022 <br> This project was initiated in september 2022</p>
+                
+            </footer>
+        </div>
+        
+        
+        <!--End of footer-->
+        <script src="js/menu.js"></script>
+        <script src="js/formValidation.js"></script>
+    </body>
+</html>

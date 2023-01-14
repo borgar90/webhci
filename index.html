@@ -3,198 +3,305 @@
     <head>
         <title>Under construction web</title>
         <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/home.css">
+        <link rel="stylesheet" href="css/slider.css">
        <meta charset="UTF-8">
        <meta name="description" content="Homepage of under construction web">
        <meta name="keywords" content="Under construction web">
        <meta name="author" content="Borgar Flaen Stensrud">
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/jquery.js"></script>
+
     </head>
     <body>
-        <header>
-            
-            <nav>
-                <div class="logoAndNavWrapper">
-                    <a href="index.html">
-                        <img src="img/swirl.png" title="Under construction web" alt="Under construction web logo">
-                    </a>
-                    <a href="index.html">
-                        <h1>Under construction web</h1>
-                    </a>
+        <div class="modal">
+            <div class="exitModal">X</div>
+            <div class="modalImg">
+                <img src="#" alt="">
+            </div>
+            <div class="content">
+                <div class="modalTitle">
+
                 </div>
-                <!--This is a hack for a site without javascript-->
-                <input id="menu-toggle" type="checkbox" >
-                <label class="menu-button-container" for="menu-toggle">
-                    <div class="menu-button"></div>
-                </label>
-                <!--End of hack-->
+                <div class="modalMainContent">
+                    <div class="modalText">
+
+                    </div>
+                    <h2>Contact us</h2>
+                    <form action="#" method="post" name="modalForm" id="modalForm" onsubmit="return validateFormModal()">
+                        <label for="modalEmail">Email: <span class="label"></span></label>
+                        <input type="email" name="modalEmail" id="modalEmail" class="modalInput">
+                        <span class="error"></span>
+                        <label for="modalName">Name: <span class="label"></span></label>
+                        <input type="text" name="modalName" id="modalName" class="modalInput">
+                        <span class="error"></span>
+                        <button class="modalBtn">Send inquiry</button>
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="blurWrapper">
+            <header>
+            
+                <nav>
+                    <div class="logoAndNavWrapper">
+                        <a href="index.html">
+                            <img src="img/swirl.png" title="Under construction web" alt="Under construction web logo">
+                        </a>
+                        <a href="index.html">
+                            <h1>Under construction web</h1>
+                        </a>
+                    </div>
+                   
+                    <div class="menuBtnWrapper">
+                        <div class="menuBtn">
+                            <span class="stripe1"></span>
+                            <span class="stripe2"></span>
+                            <span class="stripe3"></span>
+    
+                        </div>
+                    </div>
+                    
+    
+                    <ul class="menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="product.html">Product</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="orderInquery.html">Order</a></li>
+                    </ul>
+                </nav>
                 
-                <ul class="menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="product.html">Product</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                
+    
+            </header>
+            <!--Indexbanner, special banner for index page-->
+            <section id="indexBanner">
+                <ul class="aSlider">
+                    <li class="slide">
+                        <div class="box">
+                            <div class="slide-img">
+                                <img src="img/gallery/ap.png" alt="" >
+                                <div class="overlay">
+                                    <button class="buy-btn">Buy now</button>
+                                </div>
+                            </div>
+                            <div class="detail-box">
+                                <div class="type">
+                                    <a href="#">Website with 4 pages</a>
+                                    <span>new arival</span>
+                                </div>
+                                <a href="#" class="price">$1,000</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="slide">
+                        <div class="box">
+                            <div class="slide-img">
+                                <img src="img/gallery/vg.png" alt="" >
+                                <div class="overlay">
+                                    <button class="buy-btn">Buy now</button>
+                                </div>
+                            </div>
+                            <div class="detail-box">
+                                <div class="type">
+                                    <a href="#">Webshop</a>
+                                    <span>new arival</span>
+                                </div>
+                                <a href="#" class="price">$2,500</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="slide">
+                        <div class="box">
+                            <div class="slide-img">
+                                <img src="img/gallery/komplett.png" alt="" >
+                                <div class="overlay">
+                                    <button class="buy-btn">Buy now</button>
+                                </div>
+                            </div>
+                            <div class="detail-box">
+                                <div class="type">
+                                    <a href="#">Website 2 pages</a>
+                                    <span>new arival</span>
+                                </div>
+                                <a href="#" class="price">$500</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="slide">
+                        <div class="box">
+                            <div class="slide-img">
+                                <img src="img/gallery/csstricks.png" alt="" >
+                                <div class="overlay">
+                                    <button class="buy-btn">Buy now</button>
+                                </div>
+                            </div>
+                            <div class="detail-box">
+                                <div class="type">
+                                    <a href="#">Website with 4 pages and webshop</a>
+                                    <span>new arival</span>
+                                </div>
+                                <a href="#" class="price">$2,500</a>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
-            </nav>
+                <button class="carouselbtn displayLeft black" onclick="toggleCarousell(-1)">&#10094;</button>
+                <button class="displayRight carouselbtn  black" onclick="toggleCarousell(1)">&#10095;</button>
+                <div class="dots"></div>
+               
             
-            
-
-        </header>
-        <!--Indexbanner, special banner for index page-->
-        <section id="indexBanner">
-            <div>
-                <h1>Designer</h1>
-                <p>Designer specialising in web design and UI design. </p>
-            </div>
-            <img src="img/front/bockuplaptop.png" title="Designer and coder" alt="Mockup of our website" >
-            <div>
-                <h1>&#60; Coder &#62;</h1>
-                <p>Full stack developer who writes clean, elegant and efficient code.</p>
-            </div>
-        
-        </section>
-        <!--END OF INDEX BANNER-->
-        <!--HEADER TAG LINE-->
-        <section id="headerLineIndex">
-            <h1>This is our product page</h1>
-            <p>This page consists of a list of our products</p>
-        </section>
-        <!--END OF HEADER TAG LINE-->
-        <section class="mainContent">
-            <h2>We're wizzards that conjoure websites</h2>
-            <div class="aboutUs">
-                <ul>
-                    <li>
-                        <div class="aboutImg">
-                            <img src="img/front/analysis.jpg" title="Analysis" alt="Image of analysis">
-                        </div>
-                        <!--<div class="analysis"></div>-->
-                        <div class="aboutInfo">
-                            <h3>Analysis</h3>
-                            <p>We begin our conjourations by doing a set of analysis. We use data sience to figure out exactly what we're going to conjoure. We use both statistics and color theory to apply the best design. We then research what data we're going to need to optimize the site.</p>
-                        </div>       
-                    </li>
-                    <li>
-                        <div class="aboutImg">
-                            <img src="img/front/design.jpg" title="Design" alt="Image of design">
-                        </div>
-                        
-                        <!--<div class="design"></div>-->
-                        <div class="aboutInfo">
-                            <h3>Design</h3>
-                            <p>We optimize all our sites for optimal reading. We also chose colors of high contrast, to increase readability. We're also artistic, we love to design! But firstmost comes usability.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="aboutImg">
-                            <img src="img/front/development.jpg" title="Development" alt="Image of development">
-                        </div>
-                        
-                        <!--<div class="development"></div>-->
-                        <div class="aboutInfo">
-                            <h3>Development</h3>
-                            <p>We use several languages of logic to cunstruct our sites. Among the languages we use are HTML5, CSS3, SCSS, Javascript, PHP, SQL, Kotlin, Java, C#, Visual Basic. </p>
+            </section>
+            <!--END OF INDEX BANNER-->
+            <!--HEADER TAG LINE-->
+            <section id="headerLineIndex">
+                <h2>This is our product page</h2>
+                <p>This page consists of a list of our products</p>
+            </section>
+            <!--END OF HEADER TAG LINE-->
+            <section class="mainContent">
+                <h2>We're wizzards that conjoure websites</h2>
+                <div class="aboutUs">
+                    <ul>
+                        <li>
+                            <div class="aboutImg">
+                                <img src="img/front/analysis.jpg" title="Analysis" alt="Image of analysis">
+                            </div>
+                            <!--<div class="analysis"></div>-->
+                            <div class="aboutInfo">
+                                <h3>Analysis</h3>
+                                <p>We begin our conjourations by doing a set of analysis. We use data sience to figure out exactly what we're going to conjoure. We use both statistics and color theory to apply the best design. We then research what data we're going to need to optimize the site.</p>
+                            </div>       
+                        </li>
+                        <li>
+                            <div class="aboutImg">
+                                <img src="img/front/design.jpg" title="Design" alt="Image of design">
+                            </div>
                             
-                            <p>We simply love to learn everything about programming, programming is our true passion. We've developed many projects over the years.</p>
-                        </div>
-                        
-                    </li>
-                </ul>
-            </div>
-        </section>
-        <section class="newsletter">
-            <h2>Sign up for our newsletter</h2>
-            <div class="input">
-                <form action="#">
-                    <label for="newsletter">Email:</label><br />
-                    <input name="newsletter" placeholder="email@email.com" type="email" required><button type="submit" class="btn">Sign me up!</button>
-                </form>
-            </div>
-        </section>
-        <h1 style="padding: 4rem;">Our finished products</h1>
-        <section class="products">
-            
-            <div class="productDisplay">
-                <img src="img/mrfixthumb.png" class="product_img" title="Mr.fix webshop" alt="Mr fix">
-                <h5 class="product_name">Mr. fix</h5>
-                <div class="product_price">$ 2,500</div>
-                <div class="product_language">PhP</div>
-                <div class="delivery_time">1/2 year</div>
-                <div class="product_contributor">Borgar Flaen Stensrud</div>
-                <a class="product_btn" href="https://www.laravel.mrfix.no">Visit site</a>
-            </div>
-            <div class="productDisplay">
-                <img src="img/gallery/ucweb.png" class="product_img" title="Under construction web website" alt="Under construction web">
-                <h5 class="product_name">Under construction web</h5>
-                <div class="product_price">$ 1,000</div>
-                <div class="product_language">HTML5</div>
-                <div class="delivery_time">2 weeks</div>
-                <div class="product_contributor">Borgar Flaen Stensrud</div>
-                <a class="product_btn" href="index.html">Visit site</a>
-            </div>
-            <div class="productDisplay">
-                <img src="img/gallery/vg.png" class="product_img" title="Vg.no" alt="vg.no">
-                <h5 class="product_name">VG</h5>
-                <div class="product_price">$ 2,500</div>
-                <div class="product_language">PhP</div>
-                <div class="delivery_time">1/2 year</div>
-                <div class="product_contributor">Borgar Flaen Stensrud</div>
-                <a class="product_btn" href="http://www.vg.no">Visit site</a>
-            </div>
-            <div class="productDisplay">
-                <img src="img/gallery/komplett.png" class="product_img" title="Komplett.no" alt="Komplett.no">
-                <h5 class="product_name">Komplett</h5>
-                <div class="product_price">$ 2,500</div>
-                <div class="product_language">PhP</div>
-                <div class="delivery_time">1/2 year</div>
-                <div class="product_contributor">Borgar Flaen Stensrud</div>
-                <a class="product_btn" href="http://www.komplett.no">Visit site</a>
-            </div>
-        </section>
-      
-
-        <!--FOOTER-->
-        <footer>
-            <div class="footerWrapper">
-                <div class="adressWrapper">
-                    <h2 class="footerHeader">Adress</h2>
-                    <ul class="contactList">
-                        <li>Adress: Bjørn farmannsgt 13</li>
-                        <li>Postal code: 3746</li>
-                        <li>City: Skien, Norway</li>
+                            <!--<div class="design"></div>-->
+                            <div class="aboutInfo">
+                                <h3>Design</h3>
+                                <p>We optimize all our sites for optimal reading. We also chose colors of high contrast, to increase readability. We're also artistic, we love to design! But firstmost comes usability.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="aboutImg">
+                                <img src="img/front/development.jpg" title="Development" alt="Image of development">
+                            </div>
+                            
+                            <!--<div class="development"></div>-->
+                            <div class="aboutInfo">
+                                <h3>Development</h3>
+                                <p>We use several languages of logic to cunstruct our sites. Among the languages we use are HTML5, CSS3, SCSS, Javascript, PHP, SQL, Kotlin, Java, C#, Visual Basic. </p>
+                                
+                                <p>We simply love to learn everything about programming, programming is our true passion. We've developed many projects over the years.</p>
+                            </div>
+                            
+                        </li>
                     </ul>
                 </div>
-                <div class="contactWrapper">
-                    <h2 class="footerHeader">Contact</h2>
-                    <ul class="contactList2">
-                        
-                        <li>Tel: <a href="tel:+4797501753">975 01 753</a></li>
-                        <li>Email: <a class="email" href="mailto:borgar90@gmail.com">Borgar Flaen Stensrud</a></li>
-                    </ul>
+            </section>
+            <section class="newsletter">
+                <h2>Sign up for our newsletter</h2>
+                <div class="input">
+                    <form action="#">
+                        <label for="newsletter">Email:</label><br />
+                        <input name="newsletter" id="newsletter" placeholder="email@email.com" type="email" required>
+                        <button type="submit" class="btn">Sign me up!</button>
+                    </form>
                 </div>
-                <div class="socialWrapper">
-                    <h2 class="footerHeader">Social</h2>
-                    <ul class="socialMedia">
-                        <li><a class="footerLink" href="https://www.linkedin.com/in/borgar-stensrud-0204181a/"><img src="img/linkedin.png" class="linkedin" alt="linkedin"></a></li>
-                        <li><a class="footerLink" href="https://github.com/borgar90"><img src="img/github.png"  class="github" alt="Github"></a></li>
-                    </ul>
+            </section>
+            <h1 style="padding: 4rem;">Our finished products</h1>
+            <section class="products">
+                
+                <div class="productDisplay">
+                    <img src="img/mrfixthumb.png" class="product_img" title="Mr.fix webshop" alt="Mr fix">
+                    <h5 class="product_name">Mr. fix</h5>
+                    <div class="product_price">$ 2,500</div>
+                    <div class="product_language">PhP</div>
+                    <div class="delivery_time">1/2 year</div>
+                    <div class="product_contributor">Borgar Flaen Stensrud</div>
+                    <a class="product_btn" href="https://www.laravel.mrfix.no">Visit site</a>
                 </div>
-                <div class="footernavWrapper">
-                    <h2 class="footerHeader">Menu</h2>
-                    <nav>
-                        <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="product.html">Product</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="contact.html">Contact</a></li>
+                <div class="productDisplay">
+                    <img src="img/gallery/ucweb.png" class="product_img" title="Under construction web website" alt="Under construction web">
+                    <h5 class="product_name">Under construction web</h5>
+                    <div class="product_price">$ 1,000</div>
+                    <div class="product_language">HTML5</div>
+                    <div class="delivery_time">2 weeks</div>
+                    <div class="product_contributor">Borgar Flaen Stensrud</div>
+                    <a class="product_btn" href="index.html">Visit site</a>
+                </div>
+                <div class="productDisplay">
+                    <img src="img/gallery/vg.png" class="product_img" title="Vg.no" alt="vg.no">
+                    <h5 class="product_name">VG</h5>
+                    <div class="product_price">$ 2,500</div>
+                    <div class="product_language">PhP</div>
+                    <div class="delivery_time">1/2 year</div>
+                    <div class="product_contributor">Borgar Flaen Stensrud</div>
+                    <a class="product_btn" href="http://www.vg.no">Visit site</a>
+                </div>
+                <div class="productDisplay">
+                    <img src="img/gallery/komplett.png" class="product_img" title="Komplett.no" alt="Komplett.no">
+                    <h5 class="product_name">Komplett</h5>
+                    <div class="product_price">$ 2,500</div>
+                    <div class="product_language">PhP</div>
+                    <div class="delivery_time">1/2 year</div>
+                    <div class="product_contributor">Borgar Flaen Stensrud</div>
+                    <a class="product_btn" href="http://www.komplett.no">Visit site</a>
+                </div>
+            </section>
+          
+    
+            <!--FOOTER-->
+            <footer>
+                <div class="footerWrapper">
+                    <div class="adressWrapper">
+                        <h2 class="footerHeader">Adress</h2>
+                        <ul class="contactList">
+                            <li>Adress: Bjørn farmannsgt 13</li>
+                            <li>Postal code: 3746</li>
+                            <li>City: Skien, Norway</li>
                         </ul>
-                    </nav>
+                    </div>
+                    <div class="contactWrapper">
+                        <h2 class="footerHeader">Contact</h2>
+                        <ul class="contactList2">
+                            
+                            <li>Tel: <a href="tel:+4797501753">975 01 753</a></li>
+                            <li>Email: <a class="email" href="mailto:borgar90@gmail.com">Borgar Flaen Stensrud</a></li>
+                        </ul>
+                    </div>
+                    <div class="socialWrapper">
+                        <h2 class="footerHeader">Social</h2>
+                        <ul class="socialMedia">
+                            <li><a class="footerLink" href="https://www.linkedin.com/in/borgar-stensrud-0204181a/"><img src="img/linkedin.png" class="linkedin" alt="linkedin"></a></li>
+                            <li><a class="footerLink" href="https://github.com/borgar90"><img src="img/github.png"  class="github" alt="Github"></a></li>
+                        </ul>
+                    </div>
+                    <div class="footernavWrapper">
+                        <h2 class="footerHeader">Menu</h2>
+                        <nav>
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="product.html">Product</a></li>
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
-            </div>
-            <p class="copyright">Copyright Borgar Flaen Stensrud 2022 <br> This project was initiated in september 2022</p>
-            
-        </footer>
+                <p class="copyright">Copyright Borgar Flaen Stensrud 2022 <br> This project was initiated in september 2022</p>
+                
+            </footer>
+        </div>
+        
         
         <!--End of footer-->
+        <script src="js/menu.js"></script>
+        <script src="js/slider.js"></script>
+        <script src="js/modal.js"></script>
+        <script src="js/formValidation.js"></script>
     </body>
 </html>
